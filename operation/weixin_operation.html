@@ -337,7 +337,6 @@ Orginal Style from ethanschoonover.com/solarized (c) Jeremy Hull <sourdrums@gmai
 <li><p>home工程：此工程与微信相关的主要功能是在WEB版OA系统进行人员信息维护时与微信企业号通讯录进行同步更新。</p></li>
 <li><p>messagemanagement工程：此工程主要功能为推送各种类型的消息给用户。</p></li>
 <li><p>mobile-platform工程：此工程为移动端服务工程。</p></li>
-<li><p>DDpush工程：此工程主要提供推送服务。</p></li>
 </ul>
 
 <h3 id="toc_20">微信客户端实施参考步骤：</h3>
@@ -372,21 +371,21 @@ Orginal Style from ethanschoonover.com/solarized (c) Jeremy Hull <sourdrums@gmai
 
 <h2 id="toc_22">说明</h2>
 
-<h3 id="toc_23">登录微信企业号后，点击应用中心，然后点击&quot;+&quot;号。</h3>
+<h4 id="toc_23">登录微信企业号后，点击应用中心，然后点击&quot;+&quot;号。</h4>
 
 <p><font color="red"> *此步骤操作只能用权限最大的创建人操作，其他管理员账号不能创建应用</font><br/>
 <br><br/>
 <img src="./opics/wx2.png" alt=""/></p>
 
-<h3 id="toc_24">选择【消息型应用】</h3>
+<h4 id="toc_24">选择【消息型应用】</h4>
 
 <p><img src="./opics/wx3.png" alt=""/></p>
 
-<h3 id="toc_25">填写应用信息</h3>
+<h4 id="toc_25">填写应用信息</h4>
 
 <p><img src="./opics/wx4.png" alt=""/></p>
 
-<h3 id="toc_26">成功创建应用</h3>
+<h4 id="toc_26">成功创建应用</h4>
 
 <p><img src="./opics/wx5.png" alt=""/></p>
 
@@ -396,33 +395,33 @@ Orginal Style from ethanschoonover.com/solarized (c) Jeremy Hull <sourdrums@gmai
 
 <h2 id="toc_28">说明</h2>
 
-<h3 id="toc_29">用申请账户登录微信企业号后，点击【通讯录】，然后点【+】-&gt;【新增人员】</h3>
+<h4 id="toc_29">用申请账户登录微信企业号后，点击【通讯录】，然后点【+】-&gt;【新增人员】</h4>
 
 <p><img src="./opics/wx6.png" alt=""/></p>
 
-<h3 id="toc_30">填写成员信息</h3>
+<h4 id="toc_30">填写成员信息</h4>
 
 <p><font color="red"> 每个成员的必填信息都需要填写，尤其需要注意的是【账号】一项，此字段需要填写对应人员通过查询数据库中的（<strong>SECURITY_USERS_C 表中的成员对应的ID字段。不是EXTEND_ID字段</strong>）</font><br/>
 <br><br/>
 <img src="./opics/wx7.png" alt=""/></p>
 
-<h3 id="toc_31">点击左侧的树文件最后一个选项【设置】，然后在右侧点击【权限管理】</h3>
+<h4 id="toc_31">点击左侧的树文件最后一个选项【设置】，然后在右侧点击【权限管理】</h4>
 
 <p><img src="./opics/wx8.png" alt=""/></p>
 
-<h3 id="toc_32">创建管理组</h3>
+<h4 id="toc_32">创建管理组</h4>
 
 <p><img src="./opics/wx9.png" alt=""/></p>
 
-<h3 id="toc_33">填写管理组信息</h3>
+<h4 id="toc_33">填写管理组信息</h4>
 
 <p><img src="./opics/wx10.png" alt=""/></p>
 
-<h3 id="toc_34">对管理员用户进行【通讯录权限】授权和【应用权限】授权</h3>
+<h4 id="toc_34">对管理员用户进行【通讯录权限】授权和【应用权限】授权</h4>
 
 <p><img src="./opics/wx11.png" alt=""/></p>
 
-<h3 id="toc_35">点击保存，创建成功</h3>
+<h4 id="toc_35">点击保存，创建成功</h4>
 
 <p><img src="./opics/wx12.png" alt=""/></p>
 
@@ -432,7 +431,7 @@ Orginal Style from ethanschoonover.com/solarized (c) Jeremy Hull <sourdrums@gmai
 
 <h2 id="toc_37">说明</h2>
 
-<h3 id="toc_38">因为目前只对通讯录中的人员信息进行了同步，并没有对组织机构进行维护，所以需要实施人员将所有人员信息都创建在一个组织架构中，如果客户通讯录中已经存在信息，则可以利用通讯录的导入导出功能，将人员信息重新导入到一个组织架构中，一般以最根部的组织架构作为维护的组织架构。导入导出的结构请参照通讯录中的示例。在导入时需要注意，【账号】字段需要与数据库中的（SECURITY_USERS_C 表中的成员对应的ID字段）一致。</h3>
+<h4 id="toc_38">因为目前只对通讯录中的人员信息进行了同步，并没有对组织机构进行维护，所以需要实施人员将所有人员信息都创建在一个组织架构中，如果客户通讯录中已经存在信息，则可以利用通讯录的导入导出功能，将人员信息重新导入到一个组织架构中，一般以最根部的组织架构作为维护的组织架构。导入导出的结构请参照通讯录中的示例。在导入时需要注意，【账号】字段需要与数据库中的（SECURITY_USERS_C 表中的成员对应的ID字段）一致。</h4>
 
 <p></br></br><a href="#home">回到首页</a></p>
 
@@ -442,45 +441,48 @@ Orginal Style from ethanschoonover.com/solarized (c) Jeremy Hull <sourdrums@gmai
 
 <h4 id="toc_41">- 配置文件位置：</h4>
 
-<h4 id="toc_42">- properweixinqyoa\WEB-INF\classes\conf.properties</h4>
+<pre><code>xxxweixinqyoa\WEB-INF\classes\conf.properties
+</code></pre>
 
 <p><img src="./opics/weixincon.png" alt=""/></p>
 
-<h4 id="toc_43">1.proxy_base_url为APP服务端地址</h4>
+<h4 id="toc_42">1.proxy_base_url为APP服务端地址</h4>
 
-<h4 id="toc_44">2.proxy_base_domain为域名</h4>
+<h4 id="toc_43">2.proxy_base_domain为域名</h4>
 
-<h4 id="toc_45">3.weixin_corpid、weixin_corpsecret、weixin_token、weixin_encodingaeskey、weixin_agentid为微信工程重要的通信参数，获取这些参数需要管理员登录微信企业号管理平台，获取位置参照下图：</h4>
+<h4 id="toc_44">3.weixin_corpid、weixin_corpsecret、weixin_token、weixin_encodingaeskey、weixin_agentid为微信工程重要的通信参数，获取这些参数需要管理员登录微信企业号管理平台，获取位置参照下图：</h4>
 
 <p><img src="./opics/weixincon1.png" alt=""/><br/>
 PS:在设置Token和EncodingAESKey的时候可以使用随机生成的字符串，但是需要现场实施人员记录到微信工程的配置文件conf.properties中，此时点击认证是不会成功的，此时只需在配置文件conf.properties中配置好相关参数，配置好参数后启动微信工程，再做验证。详细做法请参照<a href="#attention">微信客户端部署注意事项</a>中的回调模式验证，验证通过后才能正常使用！！！</p>
 
-<h4 id="toc_46">4.weixin_department参数为部门ID，管理员可以在微信企业号管理平台的【通讯录】中【组织架构】中点击右侧的小三角，然后点击【修改部门】即可看到对应的部门ID值。</h4>
+<h4 id="toc_45">4.weixin_department参数为部门ID，管理员可以在微信企业号管理平台的【通讯录】中【组织架构】中点击右侧的小三角，然后点击【修改部门】即可看到对应的部门ID值。</h4>
 
-<h4 id="toc_47">（注:因为目前没有将企业的内部组织架构放在微信企业号中进行维护，现在的处理方式是把所有的人员都放在一个组织架构中。）</h4>
+<h4 id="toc_46">（注:因为目前没有将企业的内部组织架构放在微信企业号中进行维护，现在的处理方式是把所有的人员都放在一个组织架构中。）</h4>
 
 <p></br></br><a href="#home">回到首页</a></p>
 
-<h1 id="toc_48"><span id="homecon">微信客户端部署 - home工程的配置文件</span></h1>
+<h1 id="toc_47"><span id="homecon">微信客户端部署 - home工程的配置文件</span></h1>
 
-<h2 id="toc_49">说明</h2>
+<h2 id="toc_48">说明</h2>
 
-<h4 id="toc_50">- 需要执行SQL：</h4>
+<h4 id="toc_49">- 需要执行SQL：</h4>
 
 <pre><code> comment on column hr\_personnel_person.column1 is &#39;微信号&#39;;
 </code></pre>
 
-<h3 id="toc_51">在整合后的home文件中，只有一个配置文件，路径为：</h3>
+<h4 id="toc_50">在整合后的home文件中，只有一个配置文件，路径为：</h4>
 
 <pre><code>webapps/home/WEB-INF/classes/conf.properties
 </code></pre>
 
-<h3 id="toc_52">修改的配置配件内容<font color="red">（如果提交到现场的部署文件中没有weixinHttpUrl，需要向提交部署文件的人员进行说明，并要求其提供该参数）</font>：</h3>
+<h4 id="toc_51">修改的配置配件内容<font color="red">（如果提交到现场的部署文件中没有weixinHttpUrl，需要向提交部署文件的人员进行说明，并要求其提供该参数）</font>：</h4>
 
 <pre><code>weixinHttpUrl=http://xxx.xxx.xxx.xxx/***weixinqyoa/weixincore
 </code></pre>
 
-<h4 id="toc_53">其中xxx.xxx.xxx.xxx更换为现场用户微信端服务器的微信内网ip地址</h4>
+<h4 id="toc_52">其中xxx.xxx.xxx.xxx更换为现场用户微信端服务器的微信内网ip地址</h4>
+
+<h4 id="toc_53"><font color="red">home工程中推送相关的配置请参照<a href="#attention">微信客户端部署注意事项</a>中的推送相关配置。</font></h4>
 
 <p></br></br><a href="#home">回到首页</a></p>
 
@@ -488,7 +490,9 @@ PS:在设置Token和EncodingAESKey的时候可以使用随机生成的字符串�
 
 <h2 id="toc_55">说明</h2>
 
-<pre><code>#add by wanghe 微信推送相关 start
+<pre><code>#rmi端口号_提供rmi推送服务的端口号
+platform.rmi.port=1199
+#add by wanghe 微信推送相关 start
 #微信推送模式(1:不推送,2:推送)_部署工程时需要根据实际情况设定
 weixin_model = 2
 #微信推送域名地址（即微信工程服务器公网IP绑定的域名地址）
@@ -498,110 +502,111 @@ weixin_push_path = /xxxx
 # add by wanghe 微信推送相关 end
 </code></pre>
 
-<p><font color="red"></p>
-
-<h4 id="toc_56">修改messagemanagement工程时需要注意以下几点，否则推送将不会成功：</h4>
-
-<h4 id="toc_57">- 启动DDpush服务(DDpush不需要配置，启动即可)</h4>
-
-<h4 id="toc_58">- home工程中(视为推送客户端)需要确认参数 proper_platform_rmi_port(Linux系统路径：tomcat/bin/catalina.sh | windows系统路径:tomcat/bin/catalina.bat)。此参数需要与messagemanagement工程(视为服务端)中的conf.properties中的参数platform.rmi.port一致(路径: messagemanagement/WEB-INF/classes)</font></h4>
+<h4 id="toc_56"><font color="red">推送功能相关的关键在于rmi_host以及rmi_port这两个参数在home工程以及messagemanagement工程中的设置，详情请参照<a href="#attention">微信客户端部署注意事项</a>中的推送相关配置。</font></h4>
 
 <p></br></br><a href="#home">回到首页</a></p>
 
-<h1 id="toc_59"><span id="platformcon">微信客户端部署 - mobile-platform工程的配置文件</span></h1>
+<h1 id="toc_57"><span id="platformcon">微信客户端部署 - mobile-platform工程的配置文件</span></h1>
 
-<h2 id="toc_60">说明</h2>
+<h2 id="toc_58">说明</h2>
 
-<p>mobile-platform由各个项目的开发者提供，相应的配置参数由现场部署文件提供者提供。<br/>
-<font color="red"></p>
-
-<h4 id="toc_61">- home工程中(视为推送客户端)需要确认参数 proper_platform_rmi_host(Linux系统路径：tomcat/bin/catalina.sh | windows系统路径:tomcat/bin/catalina.bat)。此参数需要与mobile-platform工程(视为服务端)中的tomcat中的参数-Djava.rmi.server.hostname 以及 proper_platform_rmi_host一致，应该设置为mobile-platform工程所在服务器的内网IP地址(Linux系统路径：tomcat/bin/catalina.sh | windows系统路径:tomcat/bin/catalina.bat)</font></h4>
+<p>mobile-platform由各个项目的开发者提供，相应的配置参数由现场部署文件提供者提供。<br><font color="red">与微信相关的配置参数主要是platform.rmi.host以及platform.rmi.port两个参数,关于这两个参数的配置请参照<a href="#attention">微信客户端部署注意事项</a>中的推送相关配置。</font></p>
 
 <p></br></br><a href="#home">回到首页</a></p>
 
-<h1 id="toc_62"><span id="synchronization">通过企业协同管理平台同步到微信企业号通讯录</span></h1>
+<h1 id="toc_59"><span id="synchronization">通过企业协同管理平台同步到微信企业号通讯录</span></h1>
 
-<h2 id="toc_63">介绍</h2>
+<h2 id="toc_60">介绍</h2>
 
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;企业微信号的通讯录是企业与企业成员交互的重要工具和依赖，企业微信号的通讯录有一个企业微信号中的成员唯一标识，即人员通讯录中的【<strong>账号</strong>】信息，它支持对多64位字节的字符串，这个字段是与企业成员交互的凭证，因此必须保证该字段的<strong>唯一性</strong>。目前已经将与微信通讯录的同步操作集成在医院协同管理平台中了，在进行人员信息管理时会将相应的操作同步到微信通讯录中。</p>
 
-<h2 id="toc_64">PC端与微信端同步</h2>
+<h2 id="toc_61">PC端与微信端同步</h2>
 
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;因为医院协同管理平台的人事管理员在对人事信息进行维护时可能会出现与微信服务器之间的通讯障碍或者没有能够与微信通讯录同步成功的情况存在。因此在保存维护后的人员信息时可能会有错误提示，<strong>这种情况出现的概率非常低，但是如果出现了，管理员需要参照以下的引导作出相应的处理：</strong></p>
 
 <p><strong>PC端与微信端同步失败会提示：“保存成功！微信端同步失败，请联系系统管理员！”</strong></p>
 
-<h6 id="toc_65">1.用户管理中</h6>
+<h6 id="toc_62">1.用户管理中</h6>
 
-<h6 id="toc_66">点击&quot;新增院内人员&quot;按钮，提示该错误信息，管理员需要检查微信端网络情况，并登陆微信公众管理平台手动在通讯录中添加该用户的微信信息，新增用户的账号信息需要管理员查询数据库中的（SECURITY_USERS_C 表中的成员对应的ID字段）。若“邀请关注”按钮可点击，则点击邀请该用户关注。</h6>
+<h6 id="toc_63">点击&quot;新增院内人员&quot;按钮，提示该错误信息，管理员需要检查微信端网络情况，并登陆微信公众管理平台手动在通讯录中添加该用户的微信信息，新增用户的账号信息需要管理员查询数据库中的（SECURITY_USERS_C 表中的成员对应的ID字段）。若“邀请关注”按钮可点击，则点击邀请该用户关注。</h6>
 
-<h6 id="toc_67">2.用户管理中</h6>
+<h6 id="toc_64">2.用户管理中</h6>
 
-<h6 id="toc_68">点击&quot;删除&quot;按钮，提示该错误信息，管理员需要检查微信端网络情况，并登陆微信公众管理平台手动删除通讯录中该用户的微信信息。</h6>
+<h6 id="toc_65">点击&quot;删除&quot;按钮，提示该错误信息，管理员需要检查微信端网络情况，并登陆微信公众管理平台手动删除通讯录中该用户的微信信息。</h6>
 
-<h6 id="toc_69">3.员工信息中</h6>
+<h6 id="toc_66">3.员工信息中</h6>
 
-<h6 id="toc_70">- 3.1 点击”修改&quot;按钮，微信号从无到有，提示该错误信息，管理员需要检查微信端网络情况，登陆微信公众管理平台手动在通讯录中添加微信号，若“邀请关注”按钮可点击，则点击邀请该用户关注员工信息中。</h6>
+<h6 id="toc_67">- 3.1 点击”修改&quot;按钮，微信号从无到有，提示该错误信息，管理员需要检查微信端网络情况，登陆微信公众管理平台手动在通讯录中添加微信号，若“邀请关注”按钮可点击，则点击邀请该用户关注员工信息中。</h6>
 
-<h6 id="toc_71">- 3.2点击&quot;修改&quot;按钮，微信号从有到有，提示该错误信息，请多次尝试修改仍未成功，管理员需要检查网络状态或更改微信号重新提交员工信息中。</h6>
+<h6 id="toc_68">- 3.2点击&quot;修改&quot;按钮，微信号从有到有，提示该错误信息，请多次尝试修改仍未成功，管理员需要检查网络状态或更改微信号重新提交员工信息中。</h6>
 
-<h6 id="toc_72">- 3.3点击&quot;修改&quot;按钮，微信号从有到无，提示该错误信息，管理员需要检查微信端网络情况，登陆微信公众管理平台手动在通讯录中删除微信号。</h6>
+<h6 id="toc_69">- 3.3点击&quot;修改&quot;按钮，微信号从有到无，提示该错误信息，管理员需要检查微信端网络情况，登陆微信公众管理平台手动在通讯录中删除微信号。</h6>
 
-<h6 id="toc_73">4.录聘管理中</h6>
+<h6 id="toc_70">4.录聘管理中</h6>
 
-<h6 id="toc_74">- 4.1 点击&quot;离职人员录聘&quot;按钮，提示该错误信息，管理员需要检查微信端网络情况，并登录微信公众管理平台，设置该用户为启用，若“邀请关注”按钮可点击，则点击邀请该用户关注。</h6>
+<h6 id="toc_71">- 4.1 点击&quot;离职人员录聘&quot;按钮，提示该错误信息，管理员需要检查微信端网络情况，并登录微信公众管理平台，设置该用户为启用，若“邀请关注”按钮可点击，则点击邀请该用户关注。</h6>
 
-<h6 id="toc_75">- 4.2 点击&quot;返聘&quot;按钮，提示该错误信息，请检查微信端网络情况，并登录微信公众管理平台，设置该用户为启用，若“邀请关注”按钮可点击，则点击邀请该用户关注。</h6>
+<h6 id="toc_72">- 4.2 点击&quot;返聘&quot;按钮，提示该错误信息，请检查微信端网络情况，并登录微信公众管理平台，设置该用户为启用，若“邀请关注”按钮可点击，则点击邀请该用户关注。</h6>
 
-<h6 id="toc_76">5.离院管理中</h6>
+<h6 id="toc_73">5.离院管理中</h6>
 
-<h6 id="toc_77">点击“新增”按钮，提示该错误信息，管理员需要检查微信端网络情况，并登录微信公众管理平台，设置该用户为禁用。</h6>
+<h6 id="toc_74">点击“新增”按钮，提示该错误信息，管理员需要检查微信端网络情况，并登录微信公众管理平台，设置该用户为禁用。</h6>
 
 <p></br></br><a href="#home">回到首页</a></p>
 
-<h1 id="toc_78"><span id="attention">微信客户端部署注意事项</span></h1>
+<h1 id="toc_75"><span id="attention">微信客户端部署注意事项</span></h1>
 
-<h4 id="toc_79">- 需要一个有公网IP和内网IP的机器</h4>
+<h3 id="toc_76">1 - 需要一个有公网IP和内网IP的机器</h3>
 
-<h4 id="toc_80">- <font color="red">需要有映射到该服务器公网IP的域名</font></h4>
+<h3 id="toc_77"><font color="red">2. - 需要有映射到该服务器公网IP的域名</font></h3>
 
-<h4 id="toc_81">- 微信工程名为xxxweixinqyoa（xxx是各个项目具体的微信客户端前缀）</h4>
+<h3 id="toc_78">3 - 微信工程名为xxxweixinqyoa（xxx是各个项目具体的微信客户端前缀）</h3>
 
-<h4 id="toc_82">- JDK版本建议1.6</h4>
+<h3 id="toc_79">4 - JDK版本建议1.6</h3>
 
-<h4 id="toc_83">- 需要一个单独运行的80端口的tomcat</h4>
+<h3 id="toc_80">5 - 需要一个单独运行的80端口的tomcat</h3>
 
-<h4 id="toc_84">- 启动tomcat后，需要在企业号应用中进行回调模式的验证</h4>
+<h3 id="toc_81">6 - 启动tomcat后，需要在企业号应用中进行回调模式的验证</h3>
 
-<h4 id="toc_85">PS：需要特殊强调一下回调模式的验证：需要管理员用户登录到微信企业号管理平台，然后点击【应用中心】-&gt;选择想要验证的应用-&gt;【回调模式】-&gt;【回调URL及密钥】修改 -&gt; 将配置文件中的回调URL及密钥填写到对应位置<font color="red">（注：回调URL为 http:// 域名 + /xxxweixinqyoa/weixincore/api）</font> -&gt; 验证成功</h4>
+<h3 id="toc_82">7 - 回调模式的验证：需要特殊强调一下回调模式的验证：需要管理员用户登录到微信企业号管理平台，然后点击【应用中心】-&gt;选择想要验证的应用-&gt;【回调模式】-&gt;【回调URL及密钥】修改 -&gt; 将配置文件中的回调URL及密钥填写到对应位置<font color="red">（注：回调URL为 http:// 域名 + /xxxweixinqyoa/weixincore/api）</font> -&gt; 验证成功<br></h3>
 
-<h4 id="toc_86">- <font color="red">在企业微信号客户端，管理员输入&quot;createMenu&quot;创建菜单，如果收到&quot;创建菜单成功&quot;则表示创建菜单成功</font></h4>
+<h5 id="toc_83">在验证时需要做特殊处理，需要注意：调用过程中可能会出现java.security.InvalidKeyException:illegal Key Size的异常</h5>
 
-<p>在验证时需要做特殊处理，需要注意的一点：调用过程中可能会出现java.security.InvalidKeyException:illegal Key Size的异常</p>
+<h5 id="toc_84">解决方法：</h5>
 
-<p>解决方法：</p>
+<h5 id="toc_85">在官方网站下载JCE无限制权限策略文件</h5>
 
-<p>在官方网站下载JCE无限制权限策略文件</p>
+<h5 id="toc_86">请到官网下载对应的版本。</h5>
 
-<p>请到官网下载对应的版本。</p>
+<h5 id="toc_87">例如JDK7的下载地址：</h5>
 
-<p>例如JDK7的下载地址：</p>
+<h5 id="toc_88"><a href="http://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html">JDK7官方网站JCE无限制权限策略文件下载</a></h5>
 
-<p><a href="http://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html">JDK7官方网站JCE无限制权限策略文件下载</a></p>
+<h5 id="toc_89">例如JDK6的下载地址：</h5>
 
-<p>例如JDK6的下载地址：</p>
+<h5 id="toc_90"><a href="http://www.oracle.com/technetwork/java/javase/downloads/jce-6-download-429243.html">JDK6官方网站JCE无限制权限策略文件下载</a></h5>
 
-<p><a href="http://www.oracle.com/technetwork/java/javase/downloads/jce-6-download-429243.html">JDK6官方网站JCE无限制权限策略文件下载</a></p>
+<h5 id="toc_91">下载后解压，可以看到local_policy.jar和US_export_policy.jar以及readme.txt。</h5>
 
-<p>下载后解压，可以看到local_policy.jar和US_export_policy.jar以及readme.txt。</p>
+<h5 id="toc_92">如果安装了JRE，将两个jar文件放到%JRE_HOME% \lib\security</h5>
 
-<p>如果安装了JRE，将两个jar文件放到%JRE_HOME% \lib\security</p>
+<h5 id="toc_93">目录下覆盖原来的文件，</h5>
 
-<p>目录下覆盖原来的文件，</p>
+<h5 id="toc_94">如果安装了JDK，将两个jar文件放到%JDK_HOME%\jre\lib\security目录下覆盖原来文件。<br><br></h5>
 
-<p>如果安装了JDK，将两个jar文件放到%JDK_HOME%\jre\lib\security目录下覆盖原来文件。</p>
+<h3 id="toc_95"><font color="red">8 - 在企业微信号客户端，管理员输入&quot;createMenu&quot;创建菜单，如果收到&quot;创建菜单成功&quot;则表示创建菜单成功</font><br><br></h3>
 
-<h4 id="toc_87">- <font color="red">需要与提供者确认messagemanagement工程是否为完整工程，验证标准为正确配置后在WEB端的OA正常流程创建人员并且该人员已经被正常加入到微信企业号通讯录中，使用一个已有账号向该人员发送邮件，该人员微信能够收到推送，并且点击能够查看邮件内容。</font></h4>
+<h3 id="toc_96">9 - 推送相关配置：</h3>
+
+<h4 id="toc_97">1.rmi_port参数</h4>
+
+<h5 id="toc_98">- home工程中proper_platform_rmi_port(Linux系统路径：tomcat/bin/catalina.sh | windows系统路径:tomcat/bin/catalina.bat)。<br><br>- mobile-platform工程中的配置文件中的参数:platform.rmi.port<br><br>以上两个参数需要与messagemanagement工程(视为服务端)中的conf.properties中的参数platform.rmi.port一致(路径: messagemanagement/WEB-INF/classes)</h5>
+
+<h4 id="toc_99">2.rmi_host参数</h4>
+
+<h5 id="toc_100">- home工程中需要确认参数 proper_platform_rmi_host(Linux系统路径：tomcat/bin/catalina.sh | windows系统路径:tomcat/bin/catalina.bat)。<br><br>- mobile-platform工程中的tomcat中的参数-Djava.rmi.server.hostname 以及 proper_platform_rmi_host参数(Linux系统路径：tomcat/bin/catalina.sh | windows系统路径:tomcat/bin/catalina.bat)<br><br>- 以上两个参数应该设置为messagemanagement工程所在服务器的内网IP地址</h5>
+
+<h3 id="toc_101"><font color="red">10 - 需要与提供者确认messagemanagement工程以及mobile-platform工程是否为完整工程，验证标准为正确配置后在WEB端的OA正常流程创建人员并上岗,保证该人员已经被正常加入到微信企业号通讯录中，使用一个已有账号向该人员发送邮件，该人员微信能够收到推送，并且点击能够查看邮件内容。</font></h3>
 
 <p></br></br><a href="#home">回到首页</a></p>
 
