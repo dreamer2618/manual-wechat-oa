@@ -158,11 +158,10 @@ PS:在设置Token和EncodingAESKey的时候可以使用随机生成的字符串�
 说明
 --
 ####- 需要执行SQL：
-	 comment on column hr_personnel_person.column1 is '微信号';
-####在泰达之前的项目在整合后的home文件中，只有一个配置文件，路径为：
+	 comment on column hr\_personnel_person.column1 is '微信号';
+####在整合后的home文件中，只有一个配置文件，路径为：
 	webapps/home/WEB-INF/classes/conf.properties
-####<font color="green">如果是泰达之后的整合代码，则每个功能模块都有自己的配置文件，人事相关的是hr_personnel模块的conf.properties文件</font>
-####修改的配置配件内容<font color="red">（如果提交到现场的部署文件中没有weixinHttpUrl，需要向提交部署文件的人员进行说明，并要求其提供该参数）</font>
+####修改的配置配件内容<font color="red">（如果提交到现场的部署文件中没有weixinHttpUrl，需要向提交部署文件的人员进行说明，并要求其提供该参数）</font>：
 	weixinHttpUrl=http://xxx.xxx.xxx.xxx/***weixinqyoa/weixincore
 ####其中xxx.xxx.xxx.xxx更换为现场用户微信端服务器的微信内网ip地址
 ####<font color="red">home工程中推送相关的配置请参照[微信客户端部署注意事项](#attention)中的推送相关配置。</font>
@@ -194,7 +193,6 @@ PS:在设置Token和EncodingAESKey的时候可以使用随机生成的字符串�
 说明
 --
 mobile-platform由各个项目的开发者提供，相应的配置参数由现场部署文件提供者提供。<br><font color="red">与微信相关的配置参数主要是platform.rmi.host以及platform.rmi.port两个参数,关于这两个参数的配置请参照[微信客户端部署注意事项](#attention)中的推送相关配置。</font>
-
 
 </br></br>[回到首页](#home)
 
@@ -272,5 +270,4 @@ PC端与微信端同步
 
 ###<font color="red">10 - 需要与提供者确认messagemanagement工程以及mobile-platform工程是否为完整工程，验证标准为正确配置后在WEB端的OA正常流程创建人员并上岗,保证该人员已经被正常加入到微信企业号通讯录中，使用一个已有账号向该人员发送邮件，该人员微信能够收到推送，并且点击能够查看邮件内容。</font>
 </br></br>[回到首页](#home)
-
 
