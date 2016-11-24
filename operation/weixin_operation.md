@@ -27,7 +27,7 @@
 - 对于实施人员：请根据本文档的说明信息进行操作，了解[微信客户端部署注意事项](#attention)。如果遇到问题请优先参考本文档。尽量运用自己的能力分析和解决问题，而不是直接找相关开发人员进行部署。如果仍有解决不了的问题再联系相关开发人员。按照要求，需要以邮件抄送相关人员和负责人提出在实施过程中遇到的具体问题。开发人员根据具体的问题更新文档或给出建议。
 <br>
 ###微信客户端总体架构模型图如下所示：
-![](./opics/wx0.png)
+![](./opics/wx1.png)
 <br>
 ###微信客户端需要一台服务器，基本要求如下：
 
@@ -47,7 +47,11 @@
  
 - messagemanagement工程：此工程主要功能为推送各种类型的消息给用户。
  
-- mobile-platform工程：此工程为移动端服务工程。
+- mobile-platform工程：此工程为移动端服务工程。（如果需要启用APP应用则需要部署到有公网IP的服务器中）
+
+- 如果是APP需要同样上线则需要另外的服务工程作为支持，分别为properPush工程和DDpush工程。
+
+- <font color="red">建议将微信工程单独放在一台服务器中，其他工程放在home的服务器中</font>
 
 ###微信客户端实施参考步骤：
 
@@ -65,7 +69,7 @@
 
 7.部署xxxweixinqyoa微信客户端工程，进行回调模式的验证。（如有疑问，请参照[微信客户端部署注意事项](#attention)）
 
-8.部署home工程，部署messagemanagement工程，部署mobile-platform工程，启动DDpush服务。
+8.部署home工程，部署messagemanagement工程，部署mobile-platform工程。（注：如果需要APP应用则需要启动另外两个相关工程）
 
 9.<font color="red">管理员关注企业号,在企业微信号客户端，管理员输入"createMenu"创建菜单，如果收到"创建菜单成功"则表示创建菜单成功</font>
 
@@ -137,7 +141,7 @@
 	xxxweixinqyoa\WEB-INF\classes\conf.properties
 ![](./opics/weixincon.png)
 
-####1.proxy\_base_url为APP服务端地址
+####1.proxy\_base_url为mobile-platform的IP地址
 ####2.proxy\_base_domain为域名
 ####3.weixin\_corpid、weixin\_corpsecret、weixin\_token、weixin\_encodingaeskey、weixin_agentid为微信工程重要的通信参数，获取这些参数需要管理员登录微信企业号管理平台，获取位置参照下图：
 ![](./opics/weixincon1.png)
@@ -154,10 +158,11 @@ PS:在设置Token和EncodingAESKey的时候可以使用随机生成的字符串�
 说明
 --
 ####- 需要执行SQL：
-	 comment on column hr\_personnel_person.column1 is '微信号';
-####在整合后的home文件中，只有一个配置文件，路径为：
+	 comment on column hr_personnel_person.column1 is '微信号';
+####在泰达之前的项目在整合后的home文件中，只有一个配置文件，路径为：
 	webapps/home/WEB-INF/classes/conf.properties
-####修改的配置配件内容<font color="red">（如果提交到现场的部署文件中没有weixinHttpUrl，需要向提交部署文件的人员进行说明，并要求其提供该参数）</font>：
+####<font color="green">如果是泰达之后的整合代码，则每个功能模块都有自己的配置文件，人事相关的是hr_personnel模块的conf.properties文件</font>
+####修改的配置配件内容<font color="red">（如果提交到现场的部署文件中没有weixinHttpUrl，需要向提交部署文件的人员进行说明，并要求其提供该参数）</font>
 	weixinHttpUrl=http://xxx.xxx.xxx.xxx/***weixinqyoa/weixincore
 ####其中xxx.xxx.xxx.xxx更换为现场用户微信端服务器的微信内网ip地址
 ####<font color="red">home工程中推送相关的配置请参照[微信客户端部署注意事项](#attention)中的推送相关配置。</font>
